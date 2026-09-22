@@ -1,9 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>Ayat ❤️ Mohammed</title>
 
@@ -15,10 +15,16 @@
             box-sizing: border-box;
         }
 
+        html {
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             width: 100%;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100dvh;
+
+            overflow-x: hidden;
 
             font-family: "Segoe UI", Arial, sans-serif;
 
@@ -36,7 +42,7 @@
 
 
         /* =========================
-           GENERAL
+           GENERAL PAGE
         ========================= */
 
         .page {
@@ -45,7 +51,7 @@
             inset: 0;
 
             width: 100%;
-            height: 100vh;
+            min-height: 100dvh;
 
             display: flex;
 
@@ -65,9 +71,13 @@
         ========================= */
 
         #page1 {
+
             flex-direction: column;
 
             text-align: center;
+
+            padding:
+                20px;
 
             background:
                 radial-gradient(
@@ -80,6 +90,7 @@
 
 
         .intro-small {
+
             font-size: 14px;
 
             letter-spacing: 5px;
@@ -93,6 +104,7 @@
 
 
         .intro-title {
+
             font-family: Georgia, serif;
 
             font-size:
@@ -106,7 +118,9 @@
         }
 
 
-        /* Big Heart */
+        /* =========================
+           BIG HEART BUTTON
+        ========================= */
 
         .big-heart-button {
 
@@ -127,6 +141,9 @@
             align-items: center;
 
             transition: .3s;
+
+            -webkit-tap-highlight-color:
+                transparent;
         }
 
 
@@ -169,6 +186,13 @@
 
             transform:
                 scale(1.12);
+        }
+
+
+        .big-heart-button:active {
+
+            transform:
+                scale(.95);
         }
 
 
@@ -238,8 +262,19 @@
                     #64113d 70%,
                     #21051c 100%
                 );
+
+            overflow-y: auto;
+
+            overflow-x: hidden;
+
+            padding:
+                25px 0;
         }
 
+
+        /* =========================
+           GLOW
+        ========================= */
 
         .glow {
 
@@ -257,16 +292,20 @@
 
             animation:
                 glowMove 7s infinite alternate;
+
+            pointer-events: none;
         }
 
 
         .glow.one {
+
             top: -200px;
             left: -150px;
         }
 
 
         .glow.two {
+
             bottom: -250px;
             right: -150px;
 
@@ -286,7 +325,9 @@
         }
 
 
-        /* Stars */
+        /* =========================
+           STARS
+        ========================= */
 
         .stars {
 
@@ -307,6 +348,8 @@
 
             animation:
                 starsMove 20s linear infinite;
+
+            pointer-events: none;
         }
 
 
@@ -324,7 +367,9 @@
         }
 
 
-        /* Card */
+        /* =========================
+           CARD
+        ========================= */
 
         .card {
 
@@ -335,6 +380,8 @@
             max-width: 780px;
 
             padding: 55px 40px;
+
+            margin: auto;
 
             text-align: center;
 
@@ -348,6 +395,9 @@
             border-radius: 35px;
 
             backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
                 blur(20px);
 
             box-shadow:
@@ -367,6 +417,7 @@
         @keyframes cardAppear {
 
             from {
+
                 opacity: 0;
 
                 transform:
@@ -375,6 +426,7 @@
             }
 
             to {
+
                 opacity: 1;
 
                 transform:
@@ -384,7 +436,9 @@
         }
 
 
-        /* Main Heart */
+        /* =========================
+           MAIN HEART
+        ========================= */
 
         .main-heart {
 
@@ -423,6 +477,10 @@
         }
 
 
+        /* =========================
+           TITLES
+        ========================= */
+
         .small-title {
 
             font-size: 15px;
@@ -450,7 +508,9 @@
         }
 
 
-        /* Names */
+        /* =========================
+           NAMES
+        ========================= */
 
         .names {
 
@@ -487,6 +547,8 @@
 
             -webkit-background-clip: text;
 
+            background-clip: text;
+
             -webkit-text-fill-color:
                 transparent;
         }
@@ -501,7 +563,9 @@
         }
 
 
-        /* Divider */
+        /* =========================
+           DIVIDER
+        ========================= */
 
         .divider {
 
@@ -522,7 +586,9 @@
         }
 
 
-        /* Message */
+        /* =========================
+           MESSAGE
+        ========================= */
 
         .message {
 
@@ -553,7 +619,9 @@
         }
 
 
-        /* Music */
+        /* =========================
+           MUSIC
+        ========================= */
 
         .music-area {
 
@@ -566,6 +634,8 @@
             display: inline-flex;
 
             align-items: center;
+
+            justify-content: center;
 
             gap: 10px;
 
@@ -590,6 +660,9 @@
                 rgba(0,0,0,.25);
 
             transition: .3s;
+
+            -webkit-tap-highlight-color:
+                transparent;
         }
 
 
@@ -598,6 +671,13 @@
             transform:
                 translateY(-4px)
                 scale(1.04);
+        }
+
+
+        .music-btn:active {
+
+            transform:
+                scale(.96);
         }
 
 
@@ -611,7 +691,9 @@
         }
 
 
-        /* Flying Hearts */
+        /* =========================
+           FLYING HEARTS
+        ========================= */
 
         .heart {
 
@@ -675,31 +757,274 @@
         }
 
 
-        /* Mobile */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 600px) {
 
-            .card {
+            .page {
+                width: 100%;
+            }
+
+
+            /* PAGE 1 */
+
+            #page1 {
+
+                min-height: 100dvh;
 
                 padding:
-                    38px 20px;
+                    20px 15px;
             }
+
+
+            .intro-small {
+
+                font-size: 11px;
+
+                letter-spacing: 4px;
+
+                margin-bottom: 12px;
+            }
+
+
+            .intro-title {
+
+                font-size: 42px;
+
+                margin-bottom: 25px;
+            }
+
+
+            .big-heart-button {
+
+                width: 150px;
+
+                height: 150px;
+            }
+
+
+            .big-heart {
+
+                font-size: 125px;
+            }
+
+
+            .heart-text {
+
+                font-size: 15px;
+            }
+
+
+            .click-text {
+
+                font-size: 13px;
+
+                margin-top: 20px;
+            }
+
+
+            /* PAGE 2 */
+
+            #page2 {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    20px 0 35px;
+
+                overflow-y: auto;
+
+                -webkit-overflow-scrolling:
+                    touch;
+            }
+
+
+            .card {
+
+                width:
+                    calc(100% - 30px);
+
+                max-width: none;
+
+                padding:
+                    30px 18px;
+
+                margin:
+                    10px auto 30px;
+
+                border-radius:
+                    25px;
+            }
+
 
             .main-heart {
 
-                font-size: 70px;
+                font-size: 60px;
+
+                margin-bottom: 0;
             }
+
+
+            .small-title {
+
+                font-size: 11px;
+
+                letter-spacing: 3px;
+
+                margin-bottom: 8px;
+            }
+
+
+            h1 {
+
+                font-size: 40px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .names {
+
+                gap: 8px;
+
+                margin:
+                    15px 0 20px;
+            }
+
+
+            .name {
+
+                font-size: 32px;
+            }
+
+
+            .between-heart {
+
+                font-size: 22px;
+            }
+
+
+            .divider {
+
+                width: 130px;
+
+                margin-bottom: 20px;
+            }
+
 
             .message {
 
-                font-size: 16px;
+                font-size: 15px;
 
                 line-height: 1.8;
+
+                max-width: 100%;
             }
+
 
             .highlight {
 
-                font-size: 19px;
+                font-size: 18px;
+
+                margin-top: 14px;
+            }
+
+
+            .music-area {
+
+                margin-top: 25px;
+            }
+
+
+            .music-btn {
+
+                padding:
+                    13px 22px;
+
+                font-size: 14px;
+            }
+
+
+            .music-name {
+
+                font-size: 12px;
+            }
+
+
+            .glow {
+
+                width: 300px;
+
+                height: 300px;
+
+                filter:
+                    blur(60px);
+            }
+        }
+
+
+        /* =========================
+           VERY SMALL PHONES
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            .intro-title {
+
+                font-size: 36px;
+            }
+
+
+            .big-heart {
+
+                font-size: 110px;
+            }
+
+
+            .big-heart-button {
+
+                width: 135px;
+
+                height: 135px;
+            }
+
+
+            .card {
+
+                width:
+                    calc(100% - 20px);
+
+                padding:
+                    25px 14px;
+            }
+
+
+            h1 {
+
+                font-size: 34px;
+            }
+
+
+            .name {
+
+                font-size: 28px;
+            }
+
+
+            .message {
+
+                font-size: 14px;
+
+                line-height: 1.7;
+            }
+
+
+            .highlight {
+
+                font-size: 17px;
             }
         }
 
@@ -810,13 +1135,13 @@
                 you are the person who makes my world
                 brighter and my heart happier. ❤️
 
-                <br>
+                <br><br>
 
                 Every moment with you becomes
                 a beautiful memory that I want
                 to keep forever.
 
-                <br>
+                <br><br>
 
                 You make me smile without even trying,
                 and somehow everything feels better
@@ -878,7 +1203,7 @@
 
         /* =========================
            OPEN LOVE PAGE
-        ========================== */
+        ========================= */
 
         function openLove() {
 
@@ -926,7 +1251,7 @@
 
         /* =========================
            MUSIC
-        ========================== */
+        ========================= */
 
         const music =
             document.getElementById("music");
@@ -942,13 +1267,23 @@
 
             if (music.paused) {
 
-                music.play();
+                music.play()
+                    .then(() => {
 
-                musicIcon.innerHTML =
-                    "⏸️";
+                        musicIcon.innerHTML =
+                            "⏸️";
 
-                musicText.innerHTML =
-                    "Pause Our Song";
+                        musicText.innerHTML =
+                            "Pause Our Song";
+
+                    })
+                    .catch(() => {
+
+                        alert(
+                            "Tap the button again to play the song."
+                        );
+
+                    });
 
             }
 
@@ -961,7 +1296,6 @@
 
                 musicText.innerHTML =
                     "Play Our Song";
-
             }
 
         }
@@ -970,7 +1304,7 @@
 
         /* =========================
            FLYING HEARTS
-        ========================== */
+        ========================= */
 
         let heartsStarted = false;
 
@@ -1084,5 +1418,5 @@
 
 
 </body>
+
 </html>
-```
